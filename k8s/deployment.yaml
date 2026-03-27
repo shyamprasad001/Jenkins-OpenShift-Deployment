@@ -6,11 +6,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: cseopenkub-app
+      app: csekub-app
   template:
     metadata:
       labels:
-        app: cseopenkub-app
+        app: csekub-app
     spec:
       containers:
       - name: springboot-container
