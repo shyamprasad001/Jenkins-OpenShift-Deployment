@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cseopenkub-app
+  template:
+    metadata:
+      labels:
+        app: cseopenkub-app
+    spec:
+      containers:
+      - name: springboot-container
+        image: iamshyam1911/springboot-devops:latest   # ✅ FIXED IMAGE
+        ports:
+        - containerPort: 8085
